@@ -25,24 +25,24 @@ namespace WebAPI
         {
             services.AddControllers();
 
-            services.AddSingleton<ICarService, CarManager>();
+            //services.AddSingleton<ICarService, CarManager>();
 
-            services.AddSingleton<ICarDal, EfCarDal>();
+            //services.AddSingleton<ICarDal, EfCarDal>();
 
-            services.AddSingleton<IBrandService, BrandManager>();
+            //services.AddSingleton<IBrandService, BrandManager>();
 
-            services.AddSingleton<IBrandDal, EfBrandDal>();
+            //services.AddSingleton<IBrandDal, EfBrandDal>();
 
-            services.AddSingleton<IUserService, UserManager>();
+            //services.AddSingleton<IUserService, UserManager>();
 
-            services.AddSingleton<IUserDal, EfUserDal>();
+            //services.AddSingleton<IUserDal, EfUserDal>();
 
-            services.AddSingleton<IRentalService, RentalManager>();
+            //services.AddSingleton<IRentalService, RentalManager>();
 
-            services.AddSingleton<IRentalDal, EfRentalDal>();
-            services.AddSingleton<ICustomerService, CustomerManager>();
+            //services.AddSingleton<IRentalDal, EfRentalDal>();
+            //services.AddSingleton<ICustomerService, CustomerManager>();
 
-            services.AddSingleton<ICustomerDal, EfCustomerDal>();
+            //services.AddSingleton<ICustomerDal, EfCustomerDal>();
 
         }
 

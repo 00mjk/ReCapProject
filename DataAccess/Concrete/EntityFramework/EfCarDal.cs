@@ -25,7 +25,7 @@ namespace DataAccess.Concrete.EntityFramework.CarContext
                                  Id = c.Id,
                                  BrandName = b.BrandName,
                                  ColorName = co.ColorName,
-                                 DailyPrice = c.DailyPrice.ToString(),
+                                 DailyPrice = c.DailyPrice,
                                  Description = c.Description
                              };
                 return result.ToList();

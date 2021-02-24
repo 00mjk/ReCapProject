@@ -11,6 +11,10 @@ namespace Business.Concrete
     {
         IBrandDal _brandDal;
 
+        public BrandManager()
+        {
+        }
+
         public BrandManager(IBrandDal brandDal)
         {
             _brandDal = brandDal;
@@ -24,11 +28,19 @@ namespace Business.Concrete
 
         }
 
-        public IDataResult<List<Brand>> GetAll(Brand brand)
+        public IResult DeleteById(int brandId)
+        {
+            var deletedCarEntity = _brandDal.Get(b => b.BrandId == brandId).BrandName;
+            _brandDal.Delete(_brandDal.Get(b => b.BrandId == brandId));
+
+            return new SuccessResult(Messages.brandDeleted);
+        }
+
+        public IDataResult<List<Brand>> GetAll()
         {
             return new SuccessDataResult<List<Brand>>(_brandDal.GetAll());
-
         }
+
         public IDataResult<List<Brand>> GetByBrandsId(int id)
         {
             if (id < 1)
@@ -37,5 +49,6 @@ namespace Business.Concrete
             }
             return new DataResult<List<Brand>>(_brandDal.GetAll(b => b.BrandId == id), true, Messages.brandIdInvalid);
         }
+
     }
 }

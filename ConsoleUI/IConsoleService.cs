@@ -7,5 +7,6 @@ namespace ConsoleUI
     {
         void GetMenus(string[] menus);
         void GetAllBrands(List<Brand> brands);
+       
     }
 }

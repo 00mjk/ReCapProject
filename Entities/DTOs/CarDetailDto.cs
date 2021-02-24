@@ -7,7 +7,7 @@ namespace Entities.DTOs
         public string CarName { get; set; }
         public string BrandName { get; set; }
         public string ColorName { get; set; }
-        public string DailyPrice { get; set; }
+        public int DailyPrice { get; set; }
         public object Description { get; set; }
         public object Id { get; set; }
     }
